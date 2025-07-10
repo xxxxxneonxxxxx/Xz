@@ -1,0 +1,172 @@
+/* Основной блок баннера */
+.banner {
+    position: relative;
+    width: 1920px;
+    height: 1009px;
+    display: flex;
+    overflow: hidden;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Темный фон для контента */
+.banner::before {
+    content: "";
+    position: absolute;
+    width: 1180px;
+    height: 1062px;
+    left: -23px;
+    top: -19px;
+    background: #222222;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+/* Контейнер контента */
+.banner__content {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 60px;
+    width: 1055px;
+    height: 777px;
+    left: 162px;
+}
+
+/* Шапка баннера */
+.banner__header {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 763px;
+    gap: 112px;
+}
+
+.banner__logo {
+    font-family: 'Prata', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.banner__tags {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 29px;
+}
+
+.banner__tag {
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* Обертка заголовка и качеств */
+.banner__hero {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Основной заголовок */
+.banner__title {
+    font-family: 'Prata', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+/* Качества */
+.banner__qualities {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.banner__quality {
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+/* Список преимуществ */
+.banner__features {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.banner__feature {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.banner__feature-icon {
+    width: 39px;
+    height: 37px;
+}
+
+.banner__feature-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    line-height: 150%;
+    color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.banner__feature-accent {
+    font-size: 40px;
+}
+
+/* CTA кнопка */
+.banner__cta {
+    margin-top: 20px;
+    padding: 16px 32px;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+/* Фоновое изображение */
+.banner__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}

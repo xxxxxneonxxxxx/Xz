@@ -1,7 +1,7 @@
 import React from 'react';
+import './index.css'
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import Banner from "./component/banner/Banner";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+      <Banner/>
   </React.StrictMode>
 );
 
