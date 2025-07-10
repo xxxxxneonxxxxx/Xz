@@ -1,13 +1,11 @@
-/* Основной блок баннера */
+/* починить проблему с картинкой*/
 .banner {
     position: relative;
     width: 1920px;
-    height: 1009px;
+    height: 100%;
     display: flex;
+    justify-content: space-between;
     overflow: hidden;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
 /* Темный фон для контента */
@@ -25,7 +23,6 @@
 
 /* Контейнер контента */
 .banner__content {
-    position: absolute;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -34,18 +31,16 @@
     padding: 0px;
     gap: 60px;
     width: 1055px;
+    margin-left: 50px;
     height: 777px;
-    left: 162px;
 }
 
 /* Шапка баннера */
 .banner__header {
     display: flex;
-
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 763px;
     gap: 112px;
 }
 
@@ -86,15 +81,6 @@
     gap: 40px;
 }
 
-/* Основной заголовок */
-.banner__title {
-    font-family: 'Prata', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 120%;
-    color: #FFFFFF;
-}
 
 /* Качества */
 .banner__qualities {
@@ -130,8 +116,8 @@
 }
 
 .banner__feature-icon {
-    width: 39px;
-    height: 37px;
+    width: 43px;
+    height: 40px;
 }
 
 .banner__feature-text {
@@ -145,10 +131,8 @@
 }
 
 .banner__feature-accent {
-    font-size: 40px;
+    font-size: 24px;
 }
-
-/* CTA кнопка */
 .banner__cta {
     margin-top: 20px;
     padding: 16px 32px;
@@ -163,10 +147,99 @@
 
 /* Фоновое изображение */
 .banner__image {
-    position: absolute;
-    right: 0;
-    top: 0;
+    width: 763px;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
+    z-index: 10000;
 }
+/* Адаптация под ноутбуки и экраны до 1440px */
+@media (max-width: 1540px) {
+    .banner {
+        width: 100vw;       /* Подгоняем под ширину экрана */
+        height: 100%;       /* Авто высота */
+        min-height: 600px;  /* Минимальная высота для нормального отображения */
+    }
+
+    .banner::before {
+        width: 90vw;       /* Относительно ширины экрана */
+        height: 650px;
+        left: 0;
+        top: 0;
+    }
+
+    .banner__content {
+        width: 85vw;
+        height: auto;
+        max-width: 900px;
+        left: 20px;
+        padding: 20px;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .banner__header {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .banner__logo {
+        font-size: 28px;
+    }
+
+    .banner__tags {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .banner__tag {
+        font-size: 14px;
+    }
+
+    .banner__hero {
+        gap: 25px;
+    }
+
+    .banner__title {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .banner__qualities {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .banner__quality {
+        font-size: 22px;
+    }
+
+    .banner__features {
+        gap: 20px;
+    }
+
+    .banner__feature-icon {
+        width: 35px;
+        height: 32px;
+    }
+
+    .banner__feature-text {
+        font-size: 18px;
+    }
+
+    .banner__feature-accent {
+        font-size: 20px;
+    }
+
+    .banner__cta {
+        margin-top: 15px;
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .banner__image {
+        height: 100%;
+        max-width: 600px;
+    }
+}
+
+/* Для ещё меньших экранов можно добавить дополнительные медиа-запросы */

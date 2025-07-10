@@ -1,7 +1,9 @@
 import React from 'react';
 import checkMark from './checkMark.svg';
+
 import './banner.css'
 import BannerHeader from "./component/BannerHeader";
+import BannerHero from "./component/BannerHero";
 export default function Banner() {
     return (
         <div className="banner">
@@ -9,14 +11,7 @@ export default function Banner() {
 
                 <BannerHeader />
 
-                <div className="banner__hero">
-                    <h1 className="banner__title">Строим дома мечты<br/>по доступной цене</h1>
-                    <div className="banner__qualities">
-                        <h2 className="banner__quality">Качество.</h2>
-                        <h2 className="banner__quality">Надёжность.</h2>
-                        <h2 className="banner__quality">Гарантия.</h2>
-                    </div>
-                </div>
+                <BannerHero />
 
                 <ul className="banner__features">
                     <li className="banner__feature">
@@ -38,7 +33,7 @@ export default function Banner() {
                     <li className="banner__feature">
                         <img src={checkMark} alt="Check" className="banner__feature-icon"/>
                         <div className="banner__feature-text">
-                            <span className="banner__feature-accent">30% </span>
+                            <span className="banner__feature-accent">30%</span>
                             <span>экономия на материалах</span>
                         </div>
                     </li>
