@@ -11,7 +11,6 @@ export default function BannerHeroH1() {
                         color: "transparent",
                         position: "absolute",
                         width: "100%",
-                        fontFamily: "'Prata', serif",
                         fontWeight: 400,
                         fontSize: "80px",
                         lineHeight: "120%",
@@ -27,7 +26,6 @@ export default function BannerHeroH1() {
                     transition={{ duration: 2, ease: "linear" }}
                     style={{
                         position: "relative",
-                        fontFamily: "'Prata', serif",
                         fontWeight: 400,
                         fontSize: "80px",
                         lineHeight: "120%",
