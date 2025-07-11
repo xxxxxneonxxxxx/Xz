@@ -6,22 +6,10 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-}
-
-/* Темный фон для контента */
-.banner::before {
-    content: "";
-    position: absolute;
-    width: 1180px;
-    height: 1062px;
-    left: -23px;
-    top: -19px;
     background: #222222;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    z-index: 1;
+
 }
 
-/* Контейнер контента */
 .banner__content {
     z-index: 2;
     display: flex;
@@ -35,7 +23,6 @@
     height: 777px;
 }
 
-/* Шапка баннера */
 .banner__header {
     display: flex;
     flex-direction: row;
@@ -74,15 +61,12 @@
     color: #FFFFFF;
 }
 
-/* Обертка заголовка и качеств */
 .banner__hero {
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
     gap: 40px;
 }
-
-
-/* Качества */
 .banner__qualities {
     display: flex;
     flex-direction: row;
@@ -97,8 +81,6 @@
     line-height: 120%;
     color: #FFFFFF;
 }
-
-/* Список преимуществ */
 .banner__features {
     display: flex;
     flex-direction: column;
@@ -144,24 +126,21 @@
     transition: background 0.3s ease;
 }
 
-
-/* Фоновое изображение */
 .banner__image {
     width: 763px;
     height: 100%;
     object-fit: cover;
     z-index: 10000;
 }
-/* Адаптация под ноутбуки и экраны до 1440px */
 @media (max-width: 1540px) {
     .banner {
-        width: 100vw;       /* Подгоняем под ширину экрана */
-        height: 100%;       /* Авто высота */
-        min-height: 600px;  /* Минимальная высота для нормального отображения */
+        width: 100vw;
+        height: 100%;
+        min-height: 600px;
     }
 
     .banner::before {
-        width: 90vw;       /* Относительно ширины экрана */
+        width: 90vw;
         height: 650px;
         left: 0;
         top: 0;
@@ -187,7 +166,6 @@
     }
 
     .banner__tags {
-        gap: 15px;
         flex-wrap: wrap;
     }
 
@@ -241,5 +219,3 @@
         max-width: 600px;
     }
 }
-
-/* Для ещё меньших экранов можно добавить дополнительные медиа-запросы */

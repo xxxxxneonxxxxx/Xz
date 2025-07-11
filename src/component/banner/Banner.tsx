@@ -1,17 +1,22 @@
 import React from 'react';
 import checkMark from './checkMark.svg';
 
+
 import './banner.css'
-import BannerHeader from "./component/BannerHeader";
-import BannerHero from "./component/BannerHero";
+import BannerHeroH1 from "./component/BannerHeroH1";
+import BannerQualities from "./component/BannerQualities";
 export default function Banner() {
     return (
         <div className="banner">
             <div className="banner__content">
 
-                <BannerHeader />
-
-                <BannerHero />
+                <header className="banner__header">
+                    <h1 className="banner__logo">LOREM</h1>
+                </header>
+                <div className="banner__hero">
+                    <BannerHeroH1 />
+                    <BannerQualities/>
+                </div>
 
                 <ul className="banner__features">
                     <li className="banner__feature">
