@@ -6,7 +6,7 @@ import school from './img/scool.png'
 import './bestWorks.css'
 import {motion} from "framer-motion";
 
-interface BestWorksComponent {
+type BestWorksComponent= {
     name: string;
     firstYear:number;
     lastYear:number;
@@ -75,7 +75,7 @@ export default function BestWorks() {
                                     }}
                                     transition={{
                                         duration: 2,
-                                        ease: [0.25, 0.46, 0.45, 0.94],
+                                        ease: "easeInOut",
                                     }}
                                 >
                                     <img src={bestWork.url} alt="Объект строительства" />
@@ -90,7 +90,7 @@ export default function BestWorks() {
                                     animate={{ y: activid===bestWork.id ? 0 : 150, opacity: 1 }}
                                     transition={{
                                         duration: 2,
-                                        ease: [0.25, 0.46, 0.45, 0.94],
+                                        ease: "easeInOut",
                                     }}
 
                                 >
@@ -103,7 +103,6 @@ export default function BestWorks() {
                     )
                 })}
             </div>
-
         </section>
     );
 }

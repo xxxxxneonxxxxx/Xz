@@ -17,7 +17,7 @@ export const WaveText = ({ text }: { text: string }) => {
             },
         },
     };
-    const bezier: Easing = [0.445, 0.05, 0.55, 0.95];
+    const bezier: Easing = "easeInOut"
 
     const child:Variants = {
         hidden: { y: 0 },

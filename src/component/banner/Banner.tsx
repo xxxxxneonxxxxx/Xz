@@ -8,7 +8,7 @@ import {WaveText} from "./animahion/WaveText";
 import BannerFeatureText from "./component/BannerFeatureText";
 import {motion} from "framer-motion";
 
-export interface BannerText{
+export type BannerText={
     textStart: string;
     textNumber:string;
     textEnd: string;

@@ -16,7 +16,7 @@ export default function BannerFeatureText({ text }: Props) {
                     animate={{ y: [50, -10, 0], opacity: 1 }}
                     transition={{
                         duration: 1.6,
-                        ease: [0.25, 0.46, 0.45, 0.94],
+                        ease: "easeInOut",
                     }}
                     onAnimationComplete={() => {
                         bannerFeatureAccent.start({
