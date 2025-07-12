@@ -1,17 +1,17 @@
 import React from "react";
 import { motion,Easing,Variants } from "framer-motion";
 
-const WaveText = ({ text }: { text: string }) => {
+export const WaveText = ({ text }: { text: string }) => {
     const letters = text.split("");
 
     const container: Variants = {
-        hidden: { opacity: 6, x: -100 },
+        hidden: { opacity: 3, x: -100 },
         visible: {
             opacity: 1,
             x: 0,
             transition: {
                 type: "tween",
-                duration: 0.8,
+                duration: 1,
                 ease: "circOut",
                 staggerChildren: 0.05,
             },
@@ -32,7 +32,7 @@ const WaveText = ({ text }: { text: string }) => {
 
     return (
         <motion.div
-            style={{ display: "flex", fontSize: "2rem" }}
+            style={{ display: "flex",overflow: "hidden"}}
             variants={container}
             initial="hidden"
             animate="visible"
@@ -49,14 +49,3 @@ const WaveText = ({ text }: { text: string }) => {
         </motion.div>
     );
 };
-
-
-export default function BannerQualities(){
-    return (
-        <motion.div className="banner__qualities">
-            <WaveText text={"Качество."}/>
-            <WaveText text={"Надёжность."}/>
-            <WaveText text={"Гарантия."}/>
-        </motion.div>
-    )
-}

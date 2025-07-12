@@ -1,11 +1,26 @@
-import React from 'react';
+import React,{useState} from 'react';
 import checkMark from './checkMark.svg';
 
 
 import './banner.css'
 import BannerHeroH1 from "./component/BannerHeroH1";
-import BannerQualities from "./component/BannerQualities";
+import {WaveText} from "./animahion/WaveText";
+import BannerFeatureText from "./component/BannerFeatureText";
+import {motion} from "framer-motion";
+
+export interface BannerText{
+    textStart: string;
+    textNumber:string;
+    textEnd: string;
+}
+
 export default function Banner() {
+    const [bannerText] = useState<BannerText[]>([
+        { textStart: 'Проекты от ', textNumber: '10 000 ₽ ', textEnd: 'за м²' },
+        { textStart: 'Скидка до ', textNumber: '17% ', textEnd: 'на первый заказ' },
+        { textStart: '', textNumber: '30%', textEnd: 'экономия на материалах' }
+    ]);
+
     return (
         <div className="banner">
             <div className="banner__content">
@@ -15,32 +30,27 @@ export default function Banner() {
                 </header>
                 <div className="banner__hero">
                     <BannerHeroH1 />
-                    <BannerQualities/>
+                    <motion.div className="banner__qualities">
+                        <WaveText text={"Качество."}/>
+                        <WaveText text={"Надёжность."}/>
+                        <WaveText text={"Гарантия."}/>
+                    </motion.div>
                 </div>
 
                 <ul className="banner__features">
                     <li className="banner__feature">
                         <img src={checkMark} alt="Check" className="banner__feature-icon"/>
-                        <div className="banner__feature-text">
-                            <span>Проекты от </span>
-                            <span className="banner__feature-accent">10 000 ₽ </span>
-                            <span>за м²</span>
-                        </div>
+                        <BannerFeatureText text={bannerText[0]}/>
                     </li>
                     <li className="banner__feature">
                         <img src={checkMark} alt="Check" className="banner__feature-icon"/>
-                        <div className="banner__feature-text">
-                            <span>Скидка до </span>
-                            <span className="banner__feature-accent">17% </span>
-                            <span>на первый заказ</span>
-                        </div>
+                        <BannerFeatureText text={bannerText[1]}/>
+
                     </li>
                     <li className="banner__feature">
                         <img src={checkMark} alt="Check" className="banner__feature-icon"/>
-                        <div className="banner__feature-text">
-                            <span className="banner__feature-accent">30%</span>
-                            <span>экономия на материалах</span>
-                        </div>
+                        <BannerFeatureText text={bannerText[2]}/>
+
                     </li>
                 </ul>
 
@@ -54,3 +64,4 @@ export default function Banner() {
         </div>
     )
 }
+

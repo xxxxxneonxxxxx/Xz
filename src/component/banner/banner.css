@@ -1,7 +1,7 @@
 /* починить проблему с картинкой*/
 .banner {
     position: relative;
-    width: 1920px;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -71,6 +71,7 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+
 }
 
 .banner__quality {
@@ -111,10 +112,6 @@
     flex-wrap: wrap;
     gap: 5px;
 }
-
-.banner__feature-accent {
-    font-size: 24px;
-}
 .banner__cta {
     margin-top: 20px;
     padding: 16px 32px;
@@ -132,7 +129,7 @@
     object-fit: cover;
     z-index: 10000;
 }
-@media (max-width: 1540px) {
+@media (max-width: 1470px) {
     .banner {
         width: 100vw;
         height: 100%;

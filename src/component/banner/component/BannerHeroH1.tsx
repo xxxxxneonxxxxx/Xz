@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 export default function BannerHeroH1() {
     return (
         <div className="banner__hero">
-            <h1 className="banner__title">
+            <h1
+                className="banner__title">
                 <span
                     style={{
                         WebkitTextStroke: "0.5px white",
@@ -14,6 +15,7 @@ export default function BannerHeroH1() {
                         fontWeight: 400,
                         fontSize: "80px",
                         lineHeight: "120%",
+                        zIndex: 2,
                     }}
                 >
           Строим дома мечты
@@ -31,6 +33,7 @@ export default function BannerHeroH1() {
                         lineHeight: "120%",
                         color: "#FFFFFF",
                         WebkitTextStroke: "0px",
+                        zIndex: 1,
                         display: "inline-block",
                     }}
                 >
