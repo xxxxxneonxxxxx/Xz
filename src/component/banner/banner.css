@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    background: #222222;
+    background:var(--main-color);
 
 }
 
@@ -39,7 +39,7 @@
     line-height: 150%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
 .banner__tags {
@@ -58,7 +58,7 @@
     text-align: right;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
 .banner__hero {
@@ -80,7 +80,7 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 120%;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 .banner__features {
     display: flex;
@@ -107,7 +107,7 @@
     font-family: 'Arial', sans-serif;
     font-size: 24px;
     line-height: 150%;
-    color: #FFFFFF;
+    color:var(--text-color);
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
