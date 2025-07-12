@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import checkMark from './checkMark.svg';
 
-
+import house from './img/mainImg1.jpg'
 import './banner.css'
 import BannerHeroH1 from "./component/BannerHeroH1";
 import {WaveText} from "./animahion/WaveText";
@@ -24,7 +24,6 @@ export default function Banner() {
     return (
         <div className="banner">
             <div className="banner__content">
-
                 <header className="banner__header">
                     <h1 className="banner__logo">LOREM</h1>
                 </header>
@@ -58,7 +57,7 @@ export default function Banner() {
             </div>
 
             <img
-                src={'http://localhost:63342/testovoe/testovoe1/mainImg1.jpg'}
+                src={house}
                 className="banner__image"
             />
         </div>
